@@ -1,0 +1,133 @@
+
+  <script>
+    function computerPlay() {
+          let x = Math.floor(Math.random() * 3);
+          switch (x) {
+                case 0:
+                console.log("0");
+                return "rock";
+                break;
+                case 1:
+                console.log("1");
+                return "paper";
+                break;
+                case 2:
+                console.log("2");
+                return "scissors";        
+                break;
+                default:
+                  console.log("Error");
+          }
+    }
+    function playRound(pSelect, cSelect) {
+      if (pSelect.toLowerCase() == "rock") {
+        switch(cSelect) {
+          case ("rock"):
+            console.log("You both picked rock");
+            break;
+            case("scissors"):
+            console.log("You win! Rock beats Scissors");
+            break;
+            case("paper"):
+            console.log("You lost! Paper beast rock");
+            break;
+            default:
+              console.log("???");
+        }
+      }
+
+      if (pSelect.toLowerCase() == "paper") {
+        switch(cSelect) {
+          case ("rock"):
+            console.log("You won! Paper beats rock");
+            break;
+            case("scissors"):
+            console.log("You lost! Scissors beats paper");
+            break;
+            case("paper"):
+            console.log("You both picked paper!");
+            break;
+            default:
+              console.log("???");
+        }
+      }
+
+      if (pSelect.toLowerCase() == "scissors") {
+        switch(cSelect) {
+          case ("rock"):
+            console.log("You lost! Rock beats scissors");
+            break;
+            case("scissors"):
+            console.log("You both picked Scissors!");
+            break;
+            case("paper"):
+            console.log("You win! Scissors beats paper");
+            break;
+            default:
+              console.log("???");
+        }
+      }
+    }
+
+    function game() {
+      
+      let i;
+      for (i = 0; i < 5; ++i) {
+      let pSelect = prompt("Select one of the following: Rock, Paper, or Scissors");
+      let cSelect = computerPlay();
+      if (pSelect.toLowerCase() == "rock") {
+        switch(cSelect) {
+          case ("rock"):
+            console.log("You both picked rock");
+            break;
+            case("scissors"):
+            console.log("You win! Rock beats Scissors");
+            break;
+            case("paper"):
+            console.log("You lost! Paper beast rock");
+            break;
+            default:
+              console.log("???");
+        }
+      }
+
+      if (pSelect.toLowerCase() == "paper") {
+        switch(cSelect) {
+          case ("rock"):
+            console.log("You won! Paper beats rock");
+            break;
+            case("scissors"):
+            console.log("You lost! Scissors beats paper");
+            break;
+            case("paper"):
+            console.log("You both picked paper!");
+            break;
+            default:
+              console.log("???");
+        }
+      }
+
+      if (pSelect.toLowerCase() == "scissors") {
+        switch(cSelect) {
+          case ("rock"):
+            console.log("You lost! Rock beats scissors");
+            break;
+            case("scissors"):
+            console.log("You both picked Scissors!");
+            break;
+            case("paper"):
+            console.log("You win! Scissors beats paper");
+            break;
+            default:
+              console.log("???");
+        }
+      }
+    }
+    }
+    //let pSelect = prompt("Select one of the following: Rock, Paper, or Scissors");
+    //let cSelect = computerPlay();
+    game();
+    
+    //playRound(pSelect, cSelect);
+
+  </script>
